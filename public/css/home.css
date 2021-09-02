@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: #3eaeef;
+    padding: 2em;
+    color: black;
+    height: 100vh;
+    text-align: left;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+header img {
+    width: 100px;
+    cursor: pointer;
+    margin-left: 1em;
+}
+
+a.logo {
+    font-weight: bold;
+    margin: 0 1em;
+}
+
+a.cta-btn {
+    margin-left: auto;
+    background: #9ad2f1;
+    color: black;
+    padding: 0.2em 0.8em;
+    display: inline-block;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Navigation */
+
+nav {
+    position: fixed;
+    background: #68b6e4;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    width: 90%;
+    visibility: hidden;
+    text-align: left;
+    padding-top: 1.5em;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 0.3s;
+}
+nav svg {
+    cursor: pointer;
+    width: 1em;
+}
+nav p {
+    color: #494949;
+    font-size: 0.9em;
+    margin-bottom: 0;
+}
+
+.open-nav {
+    visibility: unset;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+nav ul li a {
+    display: block;
+    padding: 1em 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+nav ul li:hover {
+    background: rgba(114, 192, 238, 0.7);
+}
+
+nav .inner-wrapper,
+nav ul li {
+    padding: 0 1em;
+}
+
+/* Main */
+h1 {
+    margin-top: 1em;
+    font-size: 3em;
+}
+.panel {
+    background: #9ad2f1;
+    border-radius: 6px;
+    padding: 0.5em;
+    display: grid;
+    place-content: center;
+    margin-bottom: 2em;
+}
+.panel img {
+    width: 100%;
+}
+h3 {
+    font-size: 2em;
+    margin: 0;
+}
+.col {
+    line-height: 1.6em;
+    margin-bottom: 2em;
+}
+h4 {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+.tags ul {
+    display: flex;
+    justify-content: flex-start;
+}
+.tags ul li {
+    background: #9ad2f1;
+    padding: 0.2em 0.8em;
+    display: inline-block;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-right: 1em;
+}
+
+@media (min-width: 420px) {
+    nav {
+        width: 60%;
+    }
+}
+
+@media (min-width: 650px) {
+    .panel {
+        padding: 0.75em;
+        border-radius: 8px;
+    }
+}
