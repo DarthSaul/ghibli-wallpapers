@@ -5,6 +5,10 @@ const main = require('../controllers/main');
 
 router.route('/').get(main.index);
 router.route('/new').post(main.createWallpaper);
-router.route('/:id').get(main.showWallpaper).put(main.updateWallpaper);
+router
+    .route('/:id')
+    .get(main.showWallpaper)
+    .put(main.updateWallpaper)
+    .delete(main.destroyWallpaper);
 
 module.exports = router;
