@@ -46,20 +46,17 @@
             <div class="columns half">
                 <div class="col left">
                     <h3><%= wallpaper.movie %></h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Earum cumque aperiam, officia, autem placeat neque
-                        illum, repudiandae facere dolores vel dolore quos ex
-                        labore accusamus! Neque excepturi quae aliquam nisi!
-                    </p>
+                    <div class="col tags">
+                        <ul>
+                            <% wallpaper.tags.map(tag => { %>
+                            <li><a href="#"><%= tag %></a></li>
+                            <% } ) %>
+                        </ul>
+                    </div>
                 </div>
-                <div class="col tags">
-                    <h4>Tags</h4>
-                    <ul>
-                        <li><a href="#">forest</a></li>
-                        <li><a href="#">fighting</a></li>
-                        <li><a href="#">ashitaka</a></li>
-                    </ul>
+
+                <div class="col download">
+                    <a href="#" class="dl-btn">Download</a>
                 </div>
             </div>
         </main>

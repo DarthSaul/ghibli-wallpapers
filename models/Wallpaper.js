@@ -10,7 +10,9 @@ const wallpaperSchema = new Schema({
         type: String,
         required: true
     },
-    tags: [String]
+    desc: String,
+    tags: [String],
+    originalSize: String
 });
 
 const Wallpaper = mongoose.model('Wallpaper', wallpaperSchema);
