@@ -1,6 +1,12 @@
 const Wallpaper = require('../models/Wallpaper');
 const wrapAsync = require('../utilities/wrapAsync');
 
+module.exports.home = wrapAsync(async (req, res) => {
+    const wallpapers = await Wallpaper.find();
+    const wallpaper = wallpapers[Math.floor(Math.random() * wallpapers.length)];
+    res.render('home', { wallpaper });
+});
+
 module.exports.index = wrapAsync(async (req, res) => {
     const { name, movie, tag } = req.query;
     let query;
