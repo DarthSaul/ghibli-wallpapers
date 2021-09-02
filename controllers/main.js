@@ -19,7 +19,7 @@ module.exports.index = wrapAsync(async (req, res) => {
         };
     }
     const wallpapers = await Wallpaper.find(query);
-    res.send(wallpapers);
+    res.render('wallpapers/index', { wallpapers });
 });
 
 module.exports.showWallpaper = wrapAsync(async (req, res) => {

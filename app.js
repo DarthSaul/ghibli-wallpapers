@@ -34,7 +34,9 @@ app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 
-app.use('/', routes);
+app.get('/', (req, res) => res.redirect('/home'));
+app.get('/home', (req, res) => res.render('home'));
+app.use('/wallpapers', routes);
 
 // Error handling
 app.all('*', (req, res, next) => next(new ExpressError('Page Not Found', 404)));
