@@ -2,7 +2,23 @@ const Wallpaper = require('../models/Wallpaper');
 const wrapAsync = require('../utilities/wrapAsync');
 
 module.exports.index = wrapAsync(async (req, res) => {
-    const wallpapers = await Wallpaper.find();
+    const { name, movie, tag } = req.query;
+    let query;
+    if (name) {
+        query = { name: { $regex: name, $options: 'i' } };
+    } else if (movie) {
+        query = {
+            movie: { $regex: movie, $options: 'i' }
+        };
+    } else if (tag) {
+        query = {
+            tags: {
+                $regex: tag,
+                $options: 'i'
+            }
+        };
+    }
+    const wallpapers = await Wallpaper.find(query);
     res.send(wallpapers);
 });
 
@@ -32,4 +48,12 @@ module.exports.updateWallpaper = wrapAsync(async (req, res) => {
         return res.send('Unable to find wallpaper for update');
     }
     res.send(wallpaper);
+});
+
+module.exports.destroyWallpaper = wrapAsync(async (req, res) => {
+    const wallpaper = await Wallpaper.findByIdAndDelete(req.params.id);
+    if (!wallpaper) {
+        return res.send('Unable to find wallpaper for destroy');
+    }
+    res.send({ deleted: 'success', wallpaper });
 });
