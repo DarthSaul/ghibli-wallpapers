@@ -30,6 +30,10 @@ a {
     text-decoration: none;
 }
 
+.no-display {
+    display: none;
+}
+
 /* Header */
 header {
     display: flex;

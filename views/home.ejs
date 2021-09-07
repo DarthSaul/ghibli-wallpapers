@@ -6,7 +6,7 @@
         <div class="col tags">
             <ul>
                 <% wallpaper.tags.map(tag => { %>
-                <li><a href="#"><%= tag %></a></li>
+                <li><a href="/search/?tag=<%= tag %>"><%= tag %></a></li>
                 <% } ) %>
             </ul>
         </div>

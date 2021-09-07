@@ -34,12 +34,13 @@ app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 
-app.get('/', (req, res) => res.redirect('/home'));
 app.get('/about', (req, res) => res.render('about'));
 app.use('/', routes);
 
 // Error handling
-app.all('*', (req, res, next) => next(new ExpressError('Page Not Found', 404)));
+app.all('*', (err, req, res, next) =>
+    next(new ExpressError('Page Not Found', 404))
+);
 
 app.use((err, req, res, next) => {
     console.log(err);

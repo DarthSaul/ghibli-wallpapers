@@ -1,16 +1,26 @@
 <% layout('./layouts/boilerplate')%>
 
-<div class="search-wrapper">
-    <h1>Search</h1>
-    <div class="search-form">
-        <form action="">
-            <h3>By Movie</h3>
-            <label for="title"></label>
-            <input type="text" />
-        </form>
-    </div>
+<div class="container">
+    <div class="search-wrapper">
+        <h1>Search</h1>
+        <div class="search-form">
+            <form action="">
+                <h3>By Movie</h3>
+                <label for="title"></label>
+                <input type="text" />
+            </form>
+        </div>
 
-    <div class="tags-wrapper">
-        <h3>Tags</h3>
+        <div class="tags-wrapper">
+            <h3>Tags</h3>
+        </div>
+    </div>
+    <div class="results-wrapper">
+        <h1>Results</h1>
+        <ul>
+            <% wallpapers && wallpapers.map(wp => { %>
+            <li><%= wp.movie %></li>
+            <% } ) %>
+        </ul>
     </div>
 </div>
