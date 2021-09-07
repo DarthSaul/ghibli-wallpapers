@@ -1,0 +1,26 @@
+.about-wrapper {
+    width: 90%;
+    margin: 1em auto;
+    max-width: 950px;
+}
+
+.about-wrapper h1 {
+    position: relative;
+    display: inline-block;
+}
+
+.about-wrapper h1:before {
+    position: absolute;
+    content: '';
+    background-color: #9af1de;
+    width: 100%;
+    left: 10px;
+    bottom: 12px;
+    height: 6px;
+    z-index: -1;
+}
+
+.about-wrapper p {
+    font-size: 1.2em;
+    line-height: 1.6em;
+}

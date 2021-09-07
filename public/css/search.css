@@ -132,11 +132,11 @@ h3 {
 }
 
 @media (min-width: 1200px) {
-    .download {
+    .results .download {
         grid-area: download;
         margin-bottom: 0;
     }
-    a.dl-btn {
-        font-size: 1.5em;
+    .results a.dl-btn {
+        font-size: 1.9em;
     }
 }
