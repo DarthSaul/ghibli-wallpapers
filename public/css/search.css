@@ -1,7 +1,36 @@
 .container {
     padding-bottom: 5em;
     width: 90%;
-    margin: auto;
+    margin: 0 auto;
+}
+
+.form-field {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+label {
+    display: block;
+    margin: 0.5em auto 0.3em;
+    font-size: 1.8em;
+}
+input {
+    padding: 0.75em;
+    border: none;
+    border-radius: 4px 0px 0px 4px;
+    outline: none;
+    font-size: 1.2em;
+    font-family: 'Nunito', sans-serif;
+}
+.form-field button {
+    background: #9af1de;
+    color: black;
+    padding: 0.2em 0.8em;
+    border: none;
+    border-radius: 0px 4px 4px 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .tags-wrapper {
@@ -11,6 +40,7 @@
 .tags-wrapper h3 {
     display: flex;
     align-items: center;
+    font-size: 1.8em;
 }
 .tags-wrapper h3 img {
     margin-left: 0.3em;
@@ -21,9 +51,12 @@ h1,
 h3 {
     font-family: 'Nunito', sans-serif;
 }
-
-.results-wrapper {
-    margin-top: 2em;
+.search-wrapper h1 {
+    margin-top: 1em;
+    font-size: 3.5em;
+}
+.results ul {
+    margin-top: 3em;
 }
 
 .card {
@@ -47,7 +80,7 @@ h3 {
     margin: 0;
 }
 
-.results-wrapper .download {
+.results .download {
     margin-top: 1.5em;
 }
 
@@ -65,6 +98,9 @@ h3 {
     .container {
         padding: 2em;
         max-width: 1000px;
+    }
+    .search-wrapper h1 {
+        margin-top: -0.5em;
     }
     .card {
         display: grid;
