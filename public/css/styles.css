@@ -114,6 +114,8 @@ nav ul li {
 /* Main */
 main {
     padding-bottom: 3em;
+    width: 95%;
+    margin: auto;
 }
 h1 {
     margin-top: 1em;
@@ -224,6 +226,9 @@ h4 {
     main {
         padding: 1.5em;
     }
+    main {
+        margin-top: 3em;
+    }
     nav {
         grid-area: sidebar;
         opacity: 1;
@@ -252,7 +257,7 @@ h4 {
         display: none;
     }
     main {
-        margin-top: -3em;
+        margin-top: -2em;
     }
 }
 

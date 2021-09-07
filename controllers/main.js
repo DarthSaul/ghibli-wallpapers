@@ -25,7 +25,9 @@ module.exports.index = wrapAsync(async (req, res) => {
         };
     }
     const wallpapers = query ? await Wallpaper.find(query) : undefined;
-    res.render('search', { wallpapers });
+    let tags = [];
+    tags = await Wallpaper.distinct('tags');
+    res.render('search', { wallpapers, tags });
 });
 
 module.exports.showWallpaper = wrapAsync(async (req, res) => {
