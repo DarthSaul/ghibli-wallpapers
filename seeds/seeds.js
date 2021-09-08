@@ -10,6 +10,10 @@ mongoose
     .then(() => console.log('Connected...'))
     .catch(() => console.log('db connection err'));
 
+Wallpaper.deleteMany()
+    .then(res => console.log(res))
+    .catch(err => console.log(err));
+
 Wallpaper.insertMany([
     {
         url: 'https://res.cloudinary.com/darthsaul/image/upload/v1630617744/Ghibli-Wallpapers/spirited-away-04_cfeuo1.jpg',
@@ -70,6 +74,72 @@ Wallpaper.insertMany([
         movie: `Princess Mononoke`,
         desc: 'Some descriptive text goes here...',
         tags: ['ashitaka', 'forest', 'calm']
+    },
+    {
+        url: 'https://res.cloudinary.com/darthsaul/image/upload/v1630617272/Ghibli-Wallpapers/princess-mononoke-05_if3okg.png',
+        movie: `Princess Mononoke`,
+        desc: 'Some descriptive text goes here...',
+        tags: ['ashitaka', 'battle']
+    },
+    {
+        url: 'https://res.cloudinary.com/darthsaul/image/upload/v1630613134/Ghibli-Wallpapers/princess-mononoke-01_efjzvi.png',
+        movie: `Princess Mononoke`,
+        desc: 'Some descriptive text goes here...',
+        tags: ['forest', 'landscape', 'dark', 'calm']
+    },
+    {
+        url: 'https://res.cloudinary.com/darthsaul/image/upload/v1631076101/Ghibli-Wallpapers/howls-moving-castle-03_jdpsdf.jpg',
+        movie: `Howl's Moving Castle`,
+        desc: 'Some descriptive text goes here...',
+        tags: ['landscape', 'prairie', 'bright', 'calm']
+    },
+    {
+        url: 'https://res.cloudinary.com/darthsaul/image/upload/v1631076195/Ghibli-Wallpapers/howls-moving-castle-04_rnqkzy.jpg',
+        movie: `Howl's Moving Castle`,
+        desc: 'Some descriptive text goes here...',
+        tags: ['sophie', 'train']
+    },
+    {
+        url: 'https://res.cloudinary.com/darthsaul/image/upload/v1631076793/Ghibli-Wallpapers/spirited-away-05_rzzk1y.jpg',
+        movie: `Spirited Away`,
+        desc: 'Some descriptive text goes here...',
+        tags: ['chihiro', 'haku']
+    },
+    {
+        url: 'https://res.cloudinary.com/darthsaul/image/upload/v1631076907/Ghibli-Wallpapers/princess-mononoke-07_tacqyq.jpg',
+        movie: `Princess Mononoke`,
+        desc: 'Some descriptive text goes here...',
+        tags: ['san', 'wolves', 'battle']
+    },
+    {
+        url: 'https://res.cloudinary.com/darthsaul/image/upload/v1631076907/Ghibli-Wallpapers/princess-mononoke-07_tacqyq.jpg',
+        movie: `Spirited Away`,
+        desc: 'Some descriptive text goes here...',
+        tags: ['night', 'train', 'water', 'chihiro']
+    },
+    {
+        url: 'https://res.cloudinary.com/darthsaul/image/upload/v1631077209/Ghibli-Wallpapers/spirited-away-07_ip2osi.png',
+        movie: `Spirited Away`,
+        desc: 'Some descriptive text goes here...',
+        tags: ['train', 'water', 'calm']
+    },
+    {
+        url: 'https://res.cloudinary.com/darthsaul/image/upload/v1631077417/Ghibli-Wallpapers/howls-moving-castle-05_hetym7.jpg',
+        movie: `Howl's Moving Castle`,
+        desc: 'Some descriptive text goes here...',
+        tags: ['landscape', 'castle', 'the waste']
+    },
+    {
+        url: 'https://res.cloudinary.com/darthsaul/image/upload/v1631077544/Ghibli-Wallpapers/spirited-away-08_jsvbxk.jpg',
+        movie: `Spirited Away`,
+        desc: 'Some descriptive text goes here...',
+        tags: ['haku', 'chihiro', 'moon', 'night']
+    },
+    {
+        url: 'https://res.cloudinary.com/darthsaul/image/upload/v1631077667/Ghibli-Wallpapers/howls-moving-castle-06_vjuoym.jpg',
+        movie: `Howl's Moving Castle`,
+        desc: 'Some descriptive text goes here...',
+        tags: ['scarecrow', 'green', 'landscape', 'the waste']
     }
 ])
     .then(res => console.log(res))
