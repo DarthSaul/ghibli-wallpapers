@@ -1,37 +1,38 @@
 {
-  "name": "ghibli-wallpapers",
-  "version": "1.0.0",
-  "description": "studio ghibli wallpaper hub",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DarthSaul/ghibli-wallpapers.git"
-  },
-  "author": "saul graves",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/DarthSaul/ghibli-wallpapers/issues"
-  },
-  "homepage": "https://github.com/DarthSaul/ghibli-wallpapers#readme",
-  "dependencies": {
-    "axios": "^0.21.1",
-    "cloudinary": "^1.26.3",
-    "connect-flash": "^0.1.1",
-    "connect-mongo": "^4.5.0",
-    "dotenv": "^10.0.0",
-    "ejs": "^3.1.6",
-    "ejs-mate": "^3.0.0",
-    "express": "^4.17.1",
-    "express-session": "^1.17.2",
-    "joi": "^17.4.2",
-    "md5": "^2.3.0",
-    "method-override": "^3.0.0",
-    "mongoose": "^5.13.8",
-    "mongoose-unique-validator": "^2.0.3",
-    "multer": "^1.4.3",
-    "multer-storage-cloudinary": "^4.0.0"
-  }
+    "name": "ghibli-wallpapers",
+    "version": "1.0.0",
+    "description": "studio ghibli wallpaper hub",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/DarthSaul/ghibli-wallpapers.git"
+    },
+    "author": "saul graves",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/DarthSaul/ghibli-wallpapers/issues"
+    },
+    "homepage": "https://github.com/DarthSaul/ghibli-wallpapers#readme",
+    "dependencies": {
+        "axios": "^0.21.1",
+        "cloudinary": "^1.26.3",
+        "connect-flash": "^0.1.1",
+        "connect-mongo": "^4.5.0",
+        "dotenv": "^10.0.0",
+        "ejs": "^3.1.6",
+        "ejs-mate": "^3.0.0",
+        "express": "^4.17.1",
+        "express-session": "^1.17.2",
+        "joi": "^17.4.2",
+        "md5": "^2.3.0",
+        "method-override": "^3.0.0",
+        "mongoose": "^5.13.8",
+        "mongoose-unique-validator": "^2.0.3",
+        "multer": "^1.4.3",
+        "multer-storage-cloudinary": "^4.0.0"
+    }
 }
