@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital@0;1&display=swap');
 
 * {
     box-sizing: border-box;
@@ -63,6 +63,9 @@ a.cta-btn {
     border-radius: 8px;
     font-weight: bold;
 }
+a.cta-btn:hover {
+    background: #76f3d8;
+}
 
 /* Navigation */
 nav {
@@ -121,7 +124,7 @@ main h1 {
     font-size: 3em;
     position: relative;
     display: inline-block;
-    margin-bottom: 0;
+    margin-bottom: 0.5em;
 }
 
 main h1:after {
@@ -147,11 +150,16 @@ main h1:after {
     width: 100%;
 }
 
-h3 {
-    font-size: 2em;
+.left h3 {
+    font-size: 3em;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
-    font-weight: normal;
+    margin-right: 0.5em;
+    font-family: 'Alegreya', sans-serif;
+    font-weight: lighter;
+    font-style: italic;
+}
+.left h3 a:hover {
+    color: #262626;
 }
 a.dl-btn {
     background: #0653fa;
@@ -162,6 +170,24 @@ a.dl-btn {
     font-weight: bold;
     font-size: 1.8em;
 }
+a.dl-btn:hover {
+    background: #0442c9;
+}
+
+a.refresh-btn {
+    background: #ffffff;
+    color: black;
+    padding: 0.2em 0.8em;
+    display: inline-block;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.8em;
+    margin-top: 0.5em;
+}
+a.refresh-btn:hover {
+    background: #76f3d8;
+}
+
 h4 {
     font-size: 1.8em;
     margin: 0;
@@ -181,6 +207,9 @@ h4 {
     font-weight: bold;
     margin-right: 1em;
     margin-top: 1em;
+}
+.tags ul li:hover {
+    background: #76f3d8;
 }
 .tags ul li:last-child {
     margin-right: 0;
@@ -205,13 +234,9 @@ h4 {
     }
     .left {
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         justify-content: space-between;
-    }
-    .left h3 {
-        font-size: 1.8em;
-        margin-bottom: 0.2em;
-        margin-right: 1em;
+        flex-wrap: wrap;
     }
     .tags ul {
         justify-content: flex-end;
@@ -240,7 +265,7 @@ h4 {
         padding: 1.5em;
     }
     main {
-        margin-top: 3em;
+        margin-top: -2em;
     }
     nav {
         grid-area: sidebar;
@@ -269,9 +294,6 @@ h4 {
     svg {
         display: none;
     }
-    main {
-        margin-top: -2em;
-    }
 }
 
 @media (min-width: 1200px) {
@@ -284,6 +306,9 @@ h4 {
             'image tags'
             'image download';
         column-gap: 1em;
+    }
+    main h1 {
+        font-size: 4em;
     }
     .page-title {
         grid-area: title;
@@ -298,7 +323,6 @@ h4 {
     }
     .tags {
         grid-area: tags;
-        margin-top: 0;
     }
     .tags ul {
         justify-content: flex-start;
@@ -311,20 +335,16 @@ h4 {
         grid-area: download;
         margin-bottom: 100%;
     }
-    a.dl-btn {
-        margin-top: 0.5em;
-        font-size: 2.5em;
+    a.dl-btn,
+    a.refresh-btn {
+        margin-top: 1em;
+        font-size: 2em;
     }
     .left {
         display: unset;
     }
     .left h3 {
-        margin-top: 0;
-    }
-}
-
-@media (min-width: 1200px) {
-    main h1 {
-        font-size: 4em;
+        font-size: 2.8em;
+        margin-top: -0.2em;
     }
 }
