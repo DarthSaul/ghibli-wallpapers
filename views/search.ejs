@@ -1,0 +1,62 @@
+<% layout('./layouts/boilerplate')%>
+
+<div class="container">
+    <div class="search-wrapper">
+        <h1>Search</h1>
+        <div class="search-form">
+            <form action="">
+                <label for="movie">By Movie Name</label>
+                <div class="form-field">
+                    <input type="text" id="movie" name="movie" />
+                    <button type="submit">Search</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="tags-wrapper">
+            <h3>
+                Tags
+                <img
+                    src="/assets/minus.png"
+                    id="hide-btn"
+                    alt=""
+                    class="no-display"
+                />
+                <img src="/assets/add.png" id="show-btn" alt="" />
+            </h3>
+            <div class="tags no-display" id="tags">
+                <ul>
+                    <% tags.map(tag => { %>
+                    <li><a href="/search/?tag=<%= tag %>"><%= tag %></a></li>
+                    <% } ) %>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="results">
+        <ul>
+            <% wallpapers && wallpapers.map(wp => { %>
+            <li class="card">
+                <img
+                    src="<%= wp.large_reduced %>"
+                    alt="wallpaper"
+                    id="wallpaper-img"
+                />
+                <div class="content">
+                    <p class="title"><%= wp.movie %></p>
+                    <div class="tags">
+                        <ul>
+                            <% wp.tags.map(tag => { %>
+                            <li><%= tag %></li>
+                            <% } ) %>
+                        </ul>
+                    </div>
+                    <div class="download">
+                        <a href="#" class="dl-btn" id="dl-btn">Download</a>
+                    </div>
+                </div>
+            </li>
+            <% } ) %>
+        </ul>
+    </div>
+</div>

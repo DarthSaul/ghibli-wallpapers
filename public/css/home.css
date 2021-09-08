@@ -14,7 +14,7 @@ body {
 body {
     font-family: 'Nunito', sans-serif;
     background: #3eaeef;
-    padding: 2em;
+    padding: 1em 2em;
     color: black;
     height: 100vh;
     text-align: left;
@@ -61,7 +61,6 @@ a.cta-btn {
 }
 
 /* Navigation */
-
 nav {
     position: fixed;
     background: #68b6e4;
@@ -123,7 +122,7 @@ h1 {
     padding: 0.5em;
     display: grid;
     place-content: center;
-    margin-bottom: 1.5em;
+    margin-bottom: 0.75em;
 }
 .panel img {
     width: 100%;
@@ -135,20 +134,14 @@ h3 {
     font-family: 'Roboto', sans-serif;
     font-weight: normal;
 }
-.col p {
-    line-height: 1.6em;
-    margin-bottom: 2em;
-    color: #242424;
-}
 a.dl-btn {
-    margin-top: 0.5em;
     background: #0653fa;
     color: white;
     padding: 0.2em 0.8em;
     display: inline-block;
     border-radius: 8px;
     font-weight: bold;
-    font-size: 1.6em;
+    font-size: 1.8em;
 }
 h4 {
     font-size: 1.8em;
@@ -159,6 +152,7 @@ h4 {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+    margin-top: 0;
 }
 .tags ul li {
     background: #9af1de;
@@ -167,7 +161,10 @@ h4 {
     border-radius: 8px;
     font-weight: bold;
     margin-right: 1em;
-    margin-top: 0.5em;
+    margin-top: 1em;
+}
+.tags ul li:last-child {
+    margin-right: 0;
 }
 
 @media (min-width: 420px) {
@@ -187,17 +184,22 @@ h4 {
     body {
         padding: 1.5em;
     }
-    .panel {
-        margin-bottom: 0;
-    }
     .left {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
     .left h3 {
-        margin-top: 0.5em;
         font-size: 1.8em;
+        margin-bottom: 0.2em;
+        margin-right: 1em;
+    }
+    .tags ul {
+        justify-content: flex-end;
+    }
+    .tags ul li {
+        margin-right: 0;
+        margin-left: 1em;
     }
     nav {
         width: 45%;
@@ -233,6 +235,9 @@ h4 {
     main {
         grid-area: main;
     }
+    h1 {
+        margin-top: 0.25em;
+    }
     a.logo {
         margin: 0;
     }
@@ -247,12 +252,13 @@ h4 {
 @media (min-width: 1200px) {
     main {
         display: grid;
-        grid-template-columns: 3fr 1fr;
+        grid-template-columns: 2.5fr 1fr;
+        grid-template-rows: 5.5em auto auto;
         grid-template-areas:
             'title title'
-            'image columns'
-            'image columns';
-        column-gap: 2em;
+            'image tags'
+            'image download';
+        column-gap: 1em;
     }
     h1 {
         grid-area: title;
@@ -265,11 +271,21 @@ h4 {
         height: 100%;
         object-fit: cover;
     }
-    .columns {
-        grid-area: columns;
-        display: flex;
-        flex-direction: column;
+    .tags {
+        grid-area: tags;
         margin-top: 0;
+    }
+    .tags ul {
+        justify-content: flex-start;
+    }
+    .tags ul li {
+        margin-right: 1em;
+        margin-left: 0;
+    }
+    .download {
+        grid-area: download;
+        margin-top: 0.1em;
+        margin-bottom: 100%;
     }
     .left {
         display: unset;

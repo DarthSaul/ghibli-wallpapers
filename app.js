@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+}
+
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -12,7 +16,8 @@ const ExpressError = require('./utilities/ExpressError');
 
 const routes = require('./routes/main');
 
-const dbUrl = 'mongodb://localhost:27017/ghibliWallpapers';
+const dbUrl =
+    process.env.MONGO_DB_URI || 'mongodb://localhost:27017/ghibliWallpapers';
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -34,11 +39,13 @@ app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 
-app.get('/', (req, res) => res.redirect('/home'));
+app.get('/about', (req, res) => res.render('about'));
 app.use('/', routes);
 
 // Error handling
-app.all('*', (req, res, next) => next(new ExpressError('Page Not Found', 404)));
+app.all('*', (err, req, res, next) =>
+    next(new ExpressError('Page Not Found', 404))
+);
 
 app.use((err, req, res, next) => {
     console.log(err);
