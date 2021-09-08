@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+}
+
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -12,7 +16,8 @@ const ExpressError = require('./utilities/ExpressError');
 
 const routes = require('./routes/main');
 
-const dbUrl = 'mongodb://localhost:27017/ghibliWallpapers';
+const dbUrl =
+    process.env.MONGO_DB_URI || 'mongodb://localhost:27017/ghibliWallpapers';
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
     useUnifiedTopology: true,

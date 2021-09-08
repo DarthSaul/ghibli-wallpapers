@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
 const Wallpaper = require('../models/Wallpaper');
+require('dotenv').config();
 
 mongoose
-    .connect('mongodb://localhost:27017/ghibliWallpapers', {
+    .connect(process.env.MONGO_DB_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })

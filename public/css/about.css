@@ -7,6 +7,7 @@
 .about-wrapper h1 {
     position: relative;
     display: inline-block;
+    font-size: 4em;
 }
 
 .about-wrapper h1:before {
@@ -15,7 +16,7 @@
     background-color: #9af1de;
     width: 100%;
     left: 10px;
-    bottom: 12px;
+    bottom: 18px;
     height: 6px;
     z-index: -1;
 }
