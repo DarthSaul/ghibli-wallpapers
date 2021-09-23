@@ -161,32 +161,6 @@ main h1:after {
 .left h3 a:hover {
     color: #262626;
 }
-a.dl-btn {
-    background: #0653fa;
-    color: white;
-    padding: 0.2em 0.8em;
-    display: inline-block;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 1.8em;
-}
-a.dl-btn:hover {
-    background: #0442c9;
-}
-
-a.refresh-btn {
-    background: #ffffff;
-    color: black;
-    padding: 0.2em 0.8em;
-    display: inline-block;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 1.8em;
-    margin-top: 0.5em;
-}
-a.refresh-btn:hover {
-    background: #76f3d8;
-}
 
 h4 {
     font-size: 1.8em;
@@ -196,8 +170,10 @@ h4 {
 .tags ul {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     flex-wrap: wrap;
     margin-top: 0;
+    margin-bottom: 0.5em;
 }
 .tags ul li {
     background: #9af1de;
@@ -213,6 +189,37 @@ h4 {
 }
 .tags ul li:last-child {
     margin-right: 0;
+}
+
+.download {
+    margin: 1em 0;
+}
+
+a.dl-btn {
+    background: #0653fa;
+    color: white;
+    padding: 0.2em 0.8em;
+    display: inline-block;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.4em;
+    margin-right: 0.5em;
+}
+a.dl-btn:hover {
+    background: #0750f0;
+}
+
+a.refresh-btn {
+    background: #ffffff;
+    color: black;
+    padding: 0.2em 0.8em;
+    display: inline-block;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+a.refresh-btn:hover {
+    background: whitesmoke;
 }
 
 @media (min-width: 420px) {
@@ -232,18 +239,21 @@ h4 {
     body {
         padding: 1.5em;
     }
-    .left {
+    .tags {
         display: flex;
-        align-items: flex-end;
         justify-content: space-between;
-        flex-wrap: wrap;
+        align-items: stretch;
+        margin: 1em 0;
     }
     .tags ul {
-        justify-content: flex-end;
+        margin: 0;
     }
     .tags ul li {
-        margin-right: 0;
-        margin-left: 1em;
+        margin-top: 0;
+    }
+    .download {
+        display: flex;
+        flex-wrap: nowrap;
     }
     nav {
         width: 45%;
@@ -294,57 +304,22 @@ h4 {
     svg {
         display: none;
     }
+    .tags ul {
+        margin-bottom: 1em;
+    }
 }
 
 @media (min-width: 1200px) {
-    main {
-        display: grid;
-        grid-template-columns: 2.5fr 1fr;
-        grid-template-rows: 7em auto auto;
-        grid-template-areas:
-            'title title'
-            'image tags'
-            'image download';
-        column-gap: 1em;
-    }
-    main h1 {
-        font-size: 4em;
-    }
-    .page-title {
-        grid-area: title;
-    }
-    .panel {
-        grid-area: image;
-        display: unset;
-    }
-    .panel img {
-        height: 100%;
-        object-fit: cover;
-    }
     .tags {
-        grid-area: tags;
+        margin-top: 0;
+        margin-bottom: 0.25em;
+        margin-bottom: 0;
+        align-items: center;
     }
     .tags ul {
-        justify-content: flex-start;
-    }
-    .tags ul li {
-        margin-right: 1em;
-        margin-left: 0;
+        font-size: 1.2em;
     }
     .download {
-        grid-area: download;
-        margin-bottom: 100%;
-    }
-    a.dl-btn,
-    a.refresh-btn {
-        margin-top: 1em;
-        font-size: 2em;
-    }
-    .left {
-        display: unset;
-    }
-    .left h3 {
-        font-size: 2.8em;
-        margin-top: -0.2em;
+        font-size: 1.2em;
     }
 }

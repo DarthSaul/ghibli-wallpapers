@@ -13,17 +13,16 @@
             <ul>
                 <% wallpaper.tags.map(tag => { %>
                 <li><a href="/search/?tag=<%= tag %>"><%= tag %></a></li>
+
                 <% } ) %>
             </ul>
+            <div class="download">
+                <a href="#" class="dl-btn" id="dl-btn">Download</a>
+                <a href="/" class="refresh-btn">Next</a>
+            </div>
         </div>
     </div>
     <section class="panel">
         <img src="<%= wallpaper.url %>" alt="wallpaper" id="wallpaper-img" />
     </section>
-
-    <div class="download">
-        <a href="#" class="dl-btn" id="dl-btn">Download</a>
-        <br />
-        <a href="/" class="refresh-btn">Next</a>
-    </div>
 </main>
