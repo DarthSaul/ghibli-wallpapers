@@ -212,6 +212,42 @@ Wallpaper.insertMany([
         movie: `Castle in the Sky`,
         desc: 'Some descriptive text goes here...',
         tags: ['laputa', `ocean`, 'calm']
+    },
+    {
+        url: 'https://res.cloudinary.com/darthsaul/image/upload/v1632364547/Ghibli-Wallpapers/kikis-delivery-service-03_ndny31.jpg',
+        movie: `Kiki's Delivery Service`,
+        desc: 'Some descriptive text goes here...',
+        tags: ['kiki', `witch`]
+    },
+    {
+        url: 'https://res.cloudinary.com/darthsaul/image/upload/v1632364582/Ghibli-Wallpapers/howls-moving-castle-10_qzqxef.jpg',
+        movie: `Howl's Moving Castle`,
+        desc: 'Some descriptive text goes here...',
+        tags: ['pixel', `scarecrow`, 'markl']
+    },
+    {
+        url: 'https://res.cloudinary.com/darthsaul/image/upload/v1632364725/Ghibli-Wallpapers/princess-mononoke-10_o7yd4c.jpg',
+        movie: `Princess Mononoke`,
+        desc: 'Some descriptive text goes here...',
+        tags: ['san', `wolves`, 'illustration', 'battle']
+    },
+    {
+        url: 'https://res.cloudinary.com/darthsaul/image/upload/v1632364796/Ghibli-Wallpapers/my-neighbor-totoro-05_wuneva.jpg',
+        movie: `My Neighbor Totoro`,
+        desc: 'Some descriptive text goes here...',
+        tags: ['pixel', 'totoro', 'satsuki', 'friends']
+    },
+    {
+        url: 'https://res.cloudinary.com/darthsaul/image/upload/v1632364815/Ghibli-Wallpapers/castle-in-the-sky-03_da1db9.jpg',
+        movie: `Castle in the Sky`,
+        desc: 'Some descriptive text goes here...',
+        tags: ['robot', 'forest', 'calm']
+    },
+    {
+        url: 'https://res.cloudinary.com/darthsaul/image/upload/v1632364827/Ghibli-Wallpapers/princess-mononoke-11_bvxres.jpg',
+        movie: `Princess Mononoke`,
+        desc: 'Some descriptive text goes here...',
+        tags: ['kodama', 'forest', 'spirits']
     }
 ])
     .then(res => console.log(res))

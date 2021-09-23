@@ -30,10 +30,6 @@ a {
     text-decoration: none;
 }
 
-.no-display {
-    display: none;
-}
-
 /* Header */
 header {
     display: flex;
@@ -315,6 +311,7 @@ a.refresh-btn:hover {
         margin-bottom: 0.25em;
         margin-bottom: 0;
         align-items: center;
+        /* display: none; */
     }
     .tags ul {
         font-size: 1.2em;
@@ -322,4 +319,8 @@ a.refresh-btn:hover {
     .download {
         font-size: 1.2em;
     }
+}
+
+.no-display {
+    display: none;
 }
